@@ -43,7 +43,7 @@ const Home = () => {
           </div>
 
           {/* Animated Text */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight text-white animate-fade-in-up whitespace-nowrap text-center mx-auto">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight text-white animate-fade-in-up whitespace-nowrap text-center mx-auto">
             Imagine • <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-cyan-200">Innovate • Implement</span>
           </h1>
 
