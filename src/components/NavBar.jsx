@@ -143,10 +143,13 @@ const NavBar = () => {
         <div className="md:hidden bg-white border-t absolute w-full shadow-lg animate-slide-up h-screen">
           <div className="flex flex-col p-6 space-y-6 text-lg">
             <Link to="/" onClick={closeMenus} className="text-gray-600 font-medium hover:text-blue-600">Home</Link>
+              <div className="space-y-4 bg-gray-50 p-4 rounded-xl">
+              <p className="text-xs font-bold text-blue-600 uppercase tracking-wider">Projects</p>
            <Link to="/projects" onClick={closeMenus} className="block text-gray-700 hover:text-blue-600 pl-2 border-l-2 border-gray-300 hover:border-blue-600">All Projects</Link>
               <Link to="/projects/active" onClick={closeMenus} className="block text-gray-700 hover:text-blue-600 pl-2 border-l-2 border-gray-300 hover:border-blue-600">Active Projects</Link>
               <Link to="/projects/3d-models" onClick={closeMenus} className="block text-gray-700 hover:text-blue-600 pl-2 border-l-2 border-gray-300 hover:border-blue-600">3D Printed Models</Link>
             
+            </div>
             {/* Mobile Team Links */}
             <div className="space-y-4 bg-gray-50 p-4 rounded-xl">
               <p className="text-xs font-bold text-blue-600 uppercase tracking-wider">Our Team</p>
@@ -155,7 +158,7 @@ const NavBar = () => {
               <Link to="/team/junior" onClick={closeMenus} className="block text-gray-700 hover:text-blue-600 pl-2 border-l-2 border-gray-300 hover:border-blue-600">Associate Members</Link>
             </div>
 
-            <Link to="/contact" onClick={closeMenus} className="text-gray-600 font-medium hover:text-blue-600">Contact</Link>
+            <Link to="/contact" onClick={closeMenus} className="text-gray-600 font-medium hover:text-blue-600">Contact us</Link>
           </div>
         </div>
       )}

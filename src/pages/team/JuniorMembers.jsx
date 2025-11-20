@@ -37,9 +37,9 @@ const JuniorMembers = () => {
     <div className="min-h-screen bg-gray-50 py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Junior Members</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Associate Members</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            The future of IvLabs, learning and building amazing projects.
+         Members who assist and contribute to ongoing activities and projects.
           </p>
         </div>
 
