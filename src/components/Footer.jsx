@@ -17,10 +17,11 @@ const Footer = () => {
           </div>
           <div className="flex space-x-6">
             <a href="#" className="hover:text-white transition-colors"><YoutubeIcon size={20} /></a>
-            <a href="#" className="hover:text-white transition-colors"><Instagram size={20} /></a>
+          {/*add when insta and linkedin and github are active*/}
+       {/*     <a href="#" className="hover:text-white transition-colors"><Instagram size={20} /></a>
             <a href="#" className="hover:text-white transition-colors"><Linkedin size={20} /></a>
-            <a href="#" className="hover:text-white transition-colors"><Github size={20} /></a>
-            <a href="#" className="hover:text-white transition-colors"><Mail size={20} /></a>
+            <a href="#" className="hover:text-white transition-colors"><Github size={20} /></a>*/}
+            <a href="mailto:designandinnovationclub@gmail.com" className="hover:text-white transition-colors"><Mail size={20} /></a>
             
           </div>
         </div>

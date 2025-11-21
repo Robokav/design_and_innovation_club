@@ -49,6 +49,7 @@ const Contact = () => {
           <a 
             href="mailto:designandinnovationclub@gmail.com"
             className="group relative text-center p-8 bg-gray-50 rounded-2xl border border-transparent hover:bg-white hover:border-blue-100 hover:shadow-xl transition-all duration-300 cursor-pointer block hover:-translate-y-1"
+            
           >
              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-blue-400">
               <ArrowRight size={18} />
