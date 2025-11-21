@@ -13,7 +13,7 @@ import Contact from './pages/Contact.jsx';
 // Team Pages
 import Professor from './pages/team/Professor.jsx';
 import CoreMembers from './pages/team/CoreMembers.jsx';
-import JuniorMembers from './pages/team/JuniorMembers.jsx';
+import JuniorMembers from './pages/team/JuniorMembers1.jsx';
 
 
 // NEW Project Category Pages (Connected to Dropdown)

@@ -2,6 +2,7 @@ import React,{useEffect} from 'react';
 import { Linkedin, Mail, User } from 'lucide-react';
 import president from "../../assets/president.png";
 import treasurer from "../../assets/treasurer.jpg";
+import mediacoordinator from "../../assets/mediacoordinator.png";
 
 const TeamMember = ({ name, role,branch, image,linkedin }) => (
   <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6 text-center border border-gray-100 group">
@@ -18,7 +19,9 @@ const TeamMember = ({ name, role,branch, image,linkedin }) => (
     <p className="text-blue-600 text-sm font-medium mb-3">{role}</p>
         <p className="text-gray-500 text-xs mb-3">{branch}</p>
     <div className="flex justify-center gap-3 text-gray-400">
-      <a href={linkedin} className="hover:text-blue-600 transition-colors"><Linkedin size={18} /></a>
+      <a href={linkedin}           target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-blue-600 transition-colors z-10 relative"><Linkedin size={18} /></a>
      
     </div>
   </div>
@@ -29,7 +32,7 @@ const CoreMembers = () => {
     { name: "Siddharth Hoonka", role: "President",branch: "Metallurgy and Materials Engineering", image: president , linkedin: "https://www.linkedin.com/in/siddharth-hoonka?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     { name: "Muhammed Afnan", role: "Vice President",branch: "Metallurgy and Materials Engineering", image: null },
     { name: "Devasoth Nandhini", role: "Treasurer and Event Cordinator",branch: "Metallurgy and Materials Engineering", image: treasurer, linkedin: "https://www.linkedin.com/in/nandhini-devasoth-349666250/" },
-    { name: "Kavin Bavisi", role: "Media Coordinator",branch: "Electronics and Communication Engineering", image: null,linkedin: "https://www.linkedin.com/in/kavin-amit-bavisi-826733386/" },
+    { name: "Kavin Bavisi", role: "Media Coordinator",branch: "Electronics and Communication Engineering", image: mediacoordinator,linkedin: "https://www.linkedin.com/in/kavin-amit-bavisi-826733386/" },
   ];
    // CRITICAL FIX: Scrolls the page to the top (0, 0) every time the component loads.
   useEffect(() => {

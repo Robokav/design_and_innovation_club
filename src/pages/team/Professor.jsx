@@ -10,7 +10,7 @@ import prof2 from '../../assets/ankitsir.png';
 
 
 // 1. TeamMember Component: Manages its OWN state
-const TeamMember = ({ member }) => {
+const TeamMember = ({ member,onClick }) => {
   // This state is created FRESH for every single card.
   // Clicking one will NOT affect the others.
   const [isExpanded, setIsExpanded] = useState(false);
@@ -41,8 +41,18 @@ const TeamMember = ({ member }) => {
         <p className="text-blue-600 text-sm font-medium mb-3">{member.role}</p>
         
         <div className="flex justify-center gap-3 text-gray-400 mb-4">
-          <a href="#" className="hover:text-blue-600 transition-colors"><Linkedin size={18} /></a>
-          <a href="#" className="hover:text-blue-600 transition-colors"><Mail size={18} /></a>
+             {member.linkedin && (
+        <a 
+            href={member.linkedin} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-blue-600 transition-colors z-10 relative"
+            //onClick={(e) => e.stopPropagation()} // Prevents the card click (bio modal)
+        >
+            <Linkedin size={18} />
+        </a>)}
+        
+         
         </div>
 
         {/* Toggle Button */}
@@ -75,14 +85,16 @@ const Professor = () => {
         name: "Dr. Seelam Rajasekhar Reddy", 
         role: "Professor of Metallurgical and Materials Engineering at VNIT", 
         image: prof1,
-        bio: "I am Dr. Seelam Rajasekhar Reddy, an Assistant Professor of Metallurgical and Materials Engineering at VNIT, Nagpur. My academic background includes a Ph.D. from IIT Hyderabad and postdoctoral research at IIT Kanpur. My primary research expertise lies in Physical Metallurgy and the thermomechanical processing of advanced materials.In addition to this, my group actively works on exciting areas like Additive Manufacturing of materials for both strategic applications and biomedical uses. We also explore recycling scrap metals for unique cultural purposes, such as Dokra art, and focus on new equipment development for materials engineering research. My other research areas include Mineral Processing and Steel Making. I am currnetly Incharge of Mineral Processing Laboratory and Additive Manufacturing (Polymer Processing) Laboratory and I am proud to serve as the In-Charge of the Design and Innovation Club of VNIT." 
-    },
+        bio: "I am Dr. Seelam Rajasekhar Reddy, an Assistant Professor of Metallurgical and Materials Engineering at VNIT, Nagpur. My academic background includes a Ph.D. from IIT Hyderabad and postdoctoral research at IIT Kanpur. My primary research expertise lies in Physical Metallurgy and the thermomechanical processing of advanced materials.In addition to this, my group actively works on exciting areas like Additive Manufacturing of materials for both strategic applications and biomedical uses. We also explore recycling scrap metals for unique cultural purposes, such as Dokra art, and focus on new equipment development for materials engineering research. My other research areas include Mineral Processing and Steel Making. I am currnetly Incharge of Mineral Processing Laboratory and Additive Manufacturing (Polymer Processing) Laboratory and I am proud to serve as the In-Charge of the Design and Innovation Club of VNIT." ,
+        linkedin: "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://in.linkedin.com/in/rajasekhar-reddy-seelam-727b9162&ved=2ahUKEwjxt82itIORAxVRm68BHQCJMmIQFnoECCcQAQ&usg=AOvVaw0JjoYOnkRcfeJwJa4s05zD"
+      },
     { 
         name: "Dr. Ankit A. Bhurane", 
         role: "Professor of Electronics and Communication Engineering at VNIT", 
         image: prof2,
-        bio: "Dr. Ankit A. Bhurane has received his B.E. in Electronics and Communication, M.Tech. in Electronics, and Ph.D. in 2008, 2011, and 2016 respectively from SGBAU University, SGGS Nanded, and Indian Institute of Technology Bombay (IITB). He is following teaching as his passion and has 9+ years of experience teaching undergraduate and postgraduate courses at various institutes of national importances like Indian Institute of Information Technology, National Institute of Technology etc. He has published several papers in various International conferences and journals. He has been active reviewer for reputed IEEE conference and Elsevier journals. He has four Indian Patent Granted, and 3 filed with IPR office, India. His research interested include embedded systems, biomedical signal processing, scalable video coding and green Communication." 
-    }, 
+        bio: "Dr. Ankit A. Bhurane has received his B.E. in Electronics and Communication, M.Tech. in Electronics, and Ph.D. in 2008, 2011, and 2016 respectively from SGBAU University, SGGS Nanded, and Indian Institute of Technology Bombay (IITB). He is following teaching as his passion and has 9+ years of experience teaching undergraduate and postgraduate courses at various institutes of national importances like Indian Institute of Information Technology, National Institute of Technology etc. He has published several papers in various International conferences and journals. He has been active reviewer for reputed IEEE conference and Elsevier journals. He has four Indian Patent Granted, and 3 filed with IPR office, India. His research interested include embedded systems, biomedical signal processing, scalable video coding and green Communication." ,
+        linkedin: "https://www.linkedin.com/in/ankit-bhurane-5aa61a9/"    
+      }, 
   ];
 
   return (
