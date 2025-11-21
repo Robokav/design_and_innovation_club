@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Github, ExternalLink, ChevronLeft, ChevronRight, Video, FileText } from 'lucide-react';
+import { ArrowLeft, Github, ExternalLink, ChevronLeft, ChevronRight, Video, FileText ,X} from 'lucide-react';
 // CORRECTED PATH: ../data/projects
 import { projects } from '../data/projects'; 
 
@@ -11,6 +11,7 @@ const ProjectDetails = () => {
   // CRITICAL: We must find the project data from the imported list
   const project = projects.find(p => p.id === parseInt(id));
   const [currentImageIndex, setCurrentImageIndex] = useState(0); 
+    const [isImageModalOpen, setIsImageModalOpen] = useState(false); // Modal State
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,8 +21,9 @@ const ProjectDetails = () => {
     if (project) setCurrentImageIndex(0); // Reset gallery index when project loads
   }, [project]);
 
-  // Gallery Navigation Handlers (Ensures data is available before calling functions)
-  const nextImage = () => {
+  // Gallery Navigation Handlers
+  const nextImage = (e) => {
+    if(e) e.stopPropagation(); // Important: Stop click from closing modal
     if (project && project.gallery && project.gallery.length > 1) {
         setCurrentImageIndex((prevIndex) => 
             (prevIndex + 1) % project.gallery.length
@@ -29,7 +31,8 @@ const ProjectDetails = () => {
     }
   };
 
-  const prevImage = () => {
+  const prevImage = (e) => {
+    if(e) e.stopPropagation(); // Important: Stop click from closing modal
     if (project && project.gallery && project.gallery.length > 1) {
         setCurrentImageIndex((prevIndex) => 
             (prevIndex - 1 + project.gallery.length) % project.gallery.length
@@ -63,6 +66,7 @@ const ProjectDetails = () => {
   }
 
   // Determine the category for the back button text
+  const galleryImages = project.gallery || [project.image];
   const backCategory = project.category ? project.category : 'all'; 
 
   return (
@@ -79,37 +83,48 @@ const ProjectDetails = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           
+                     
           {/* Image Gallery Column */}
           <div className="space-y-4">
-            <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100 h-80 lg:h-96 relative group">
+            <div 
+                className="rounded-2xl overflow-hidden shadow-xl border border-gray-100 h-96 lg:h-[500px] relative group bg-black/90 flex items-center justify-center cursor-zoom-in"
+                onClick={() => setIsImageModalOpen(true)} 
+            >
+                {/* Main Image */}
                 <img 
-                    src={project.gallery[currentImageIndex]} // Display current image
-                    alt={`${project.title} - Photo ${currentImageIndex + 1}`} 
-                    key={currentImageIndex} // Key ensures React re-renders image smoothly
-                    className="w-full h-full object-cover animate-fade-in"
+                    src={galleryImages[currentImageIndex]} 
+                    alt={`${project.title} - Photo`} 
+                    className="w-full h-full object-contain animate-fade-in"
                 />
 
-                {/* Gallery Navigation Buttons (only visible if more than one image) */}
-                {project.gallery.length > 1 && (
+                <div className="absolute top-4 right-4 bg-black/50 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                    Click to Expand
+                </div>
+
+                {/* Gallery Navigation Buttons */}
+                {galleryImages.length > 1 && (
                     <>
                         <button 
-                            onClick={prevImage}
-                            className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors z-20"
+                            onClick={(e) => prevImage(e)}
+                            className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/10 text-white rounded-full hover:bg-white/20 backdrop-blur-md transition-colors z-20"
                         >
                             <ChevronLeft size={24} />
                         </button>
                         <button 
-                            onClick={nextImage}
-                            className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors z-20"
+                            onClick={(e) => nextImage(e)}
+                            className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/10 text-white rounded-full hover:bg-white/20 backdrop-blur-md transition-colors z-20"
                         >
                             <ChevronRight size={24} />
                         </button>
                         <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
-                            {project.gallery.map((_, index) => (
+                            {galleryImages.map((_, index) => (
                                 <div 
                                     key={index}
-                                    className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-colors ${index === currentImageIndex ? 'bg-white shadow-md' : 'bg-gray-400/80'}`}
-                                    onClick={() => setCurrentImageIndex(index)}
+                                    className={`w-2 h-2 rounded-full cursor-pointer transition-all ${index === currentImageIndex ? 'bg-white w-4' : 'bg-white/50'}`}
+                                    onClick={(e) => {
+                                        e.stopPropagation(); 
+                                        setCurrentImageIndex(index);
+                                    }}
                                 />
                             ))}
                         </div>
@@ -197,6 +212,47 @@ const ProjectDetails = () => {
 
         </div>
       </div>
+
+    
+      {/* FULL SCREEN IMAGE MODAL */}
+      {isImageModalOpen && (
+        <div 
+            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in"
+            onClick={() => setIsImageModalOpen(false)}
+        >
+            <button 
+                onClick={() => setIsImageModalOpen(false)}
+                className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors p-2 bg-white/10 rounded-full hover:bg-white/20"
+            >
+                <X size={32} />
+            </button>
+
+            <img 
+                src={galleryImages[currentImageIndex]} 
+                alt="Full Screen View" 
+                className="max-w-full max-h-[90vh] object-contain shadow-2xl"
+                onClick={(e) => e.stopPropagation()} 
+            />
+
+            {galleryImages.length > 1 && (
+                <>
+                    <button 
+                        onClick={(e) => prevImage(e)}
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 p-4 text-white/70 hover:text-white transition-colors bg-black/20 hover:bg-black/40 rounded-full"
+                    >
+                        <ChevronLeft size={48} />
+                    </button>
+                    <button 
+                        onClick={(e) => nextImage(e)}
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 p-4 text-white/70 hover:text-white transition-colors bg-black/20 hover:bg-black/40 rounded-full"
+                    >
+                        <ChevronRight size={48} />
+                    </button>
+                </>
+            )}
+        </div>
+      )}
+      
     </section>
   );
 };

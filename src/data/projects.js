@@ -1,6 +1,8 @@
       {/*add this in each section to showcase extra features on website
         features: ["6-Wheel Drive System", "Real-time SLAM Mapping", "Obstacle Avoidance"],*/}
 import image from "../assets/commingsoon.png"
+import hogwarts from "../assets/hogwarts.jpg"
+import hogwarts1 from "../assets/hogwarts1.jpg"
 
 export const projects = [
     {
@@ -20,16 +22,17 @@ export const projects = [
     },
     {
       id: 2,
-      title: "AI Drone Surveillance",
-      description: "Smart drone system capable of real-time object detection and tracking for campus security monitoring.",
-      fullDescription: "This project involves a quadcopter drone equipped with a high-resolution camera and an onboard AI processing unit...",
-      features: [""],
-      gallery: ["https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&q=80&w=800"],
-      tags: ["instrumentation", "research and development", "Arduino"],
+      title: "AuraRead",
+      description: "A smart pen that scans any word and instantly speaks its meaning for seamless, intuitive reading.",
+      fullDescription: "Comming Soon",
+     
+      image:image,
+      gallery: [image],
+      tags: ["OpenCV", "OCR", "Voice Dictionary"],
       category: "active",
-      github: "#",
+      github: "",
       videoLink: "",// Blank field is fine, but ensures consistency
-      docsLink: "https://drive.google.com/doc/ai_manual_link" // <-- NEW FIELD
+      docsLink: "" // <-- NEW FIELD
     },
     // Adding placeholder for other projects to complete the file structure
     {
@@ -47,16 +50,17 @@ export const projects = [
     },
     {
         id: 4,
-        title: "",
-        description: "Custom 3D printed chassis designed for lightweight performance.",
-        fullDescription: "The Gesture Controlled Car Chassis showcases rapid prototyping and mechanical design.",
-        features: ["null"],
-        gallery: ["https://images.unsplash.com/photo-1517055248131-1f8f53ad5419?auto=format&fit=crop&q=80&w=800"],
-        tags: ["3D Design", "Prototyping"],
+        title: "Hogwarts Castle",
+        description: "A highly detailed Hogwarts Castle model designed in AutoCAD and transformed into a tangible structure through precision 3D printing",
+        fullDescription: "This project features a detailed 3D model of the Hogwarts Castle, digitally crafted in AutoCAD and brought to life through 3D printing. The design captures the intricate architecture, towers, and textures of the iconic structure, demonstrating precision modeling skills and advanced knowledge of 3D CAD tools. The final print showcases complex geometries, layered terrain, and structural depth, highlighting the capabilities of additive manufacturing and the creative process from digital concept to physical model.",
+        
+        gallery: [hogwarts,hogwarts1],
+        tags: ["AutoCad", "3d printing","Hogwarts model"],
         category: "3d-model",
-        github: "#",
-        videoLink: "https://www.youtube.com/watch?v=car_chassis_link",
-        docsLink: "https://drive.google.com/doc/ai_manual_link" // <-- NEW FIELD
+        image: hogwarts,
+        github: "",
+        videoLink: "",
+        docsLink: "" // <-- NEW FIELD
         
       }
 ];
