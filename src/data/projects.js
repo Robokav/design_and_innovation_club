@@ -3,6 +3,10 @@
 import image from "../assets/commingsoon.png"
 import hogwarts from "../assets/hogwarts.jpg"
 import hogwarts1 from "../assets/hogwarts1.jpg"
+import mom from "../assets/lovemom.jpg"
+import dad from "../assets/lovedad.jpg"
+import love from "../assets/love.jpg"
+
 
 export const projects = [
     {
@@ -37,14 +41,15 @@ export const projects = [
     // Adding placeholder for other projects to complete the file structure
     {
         id: 3,
-        title: "Smart Prosthetic Arm",
-        description: "Low-cost 3D printed prosthetic arm controlled by EMG muscle signals.",
-        fullDescription: "A bio-medical engineering marvel, this smart prosthetic arm is 3D printed to keep costs low.",
+        title: "3D Dual-View Ambigram",
+        description: "A perspective-based 3D ambigram combining two names into one reversible design.",
+        fullDescription: " This project is a 3D dual-view ambigram, designed so that a single 3D structure displays two different messages when viewed from opposite angles. From one direction, the letters visually align to form the phrase \“LOVE U MOM,\” and when the model is viewed from the other side, the same geometry reads \“LOVE U DAD.\"The design was created by modeling each letter with precise depth, rotation, and perspective alignment so that the shapes overlap in a way that produces two readable words within one object. This type of structure is known as a 3D ambigram or perspective ambigram, where the interpretation changes depending on the viewer’s position. The final model was 3D-printed using individually formed letters placed on a base, demonstrating creativity in CAD modeling, spatial visualization, and dual-message design. The piece serves as a unique decorative display and a personalized tribute to both parents.",
         //features: ["EMG Signal Processing", "3D Printed Components"],
-        gallery: ["https://images.unsplash.com/photo-1589254065878-42c9da9e2fc6?auto=format&fit=crop&q=80&w=800"],
-        tags: ["Bio-Medical", "3D Printing"],
+        image:love,
+        gallery: [love,mom,dad],
+        tags: ["Ambigram", "3D Printing","AutoCad"],
         category: "3d-model",
-        github: "#",
+        github: "",
         videoLink: "",
        //ocsLink: "https://drive.google.com/doc/ai_manual_link" // <-- NEW FIELD0
     },
