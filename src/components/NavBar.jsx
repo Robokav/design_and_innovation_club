@@ -154,7 +154,7 @@ const NavBar = () => {
             <div className="space-y-4 bg-gray-50 p-4 rounded-xl">
               <p className="text-xs font-bold text-blue-600 uppercase tracking-wider">Our Team</p>
               <Link to="/team/professor" onClick={closeMenus} className="block text-gray-700 hover:text-blue-600 pl-2 border-l-2 border-gray-300 hover:border-blue-600">Professor Incharge</Link>
-              <Link to="/team/core" onClick={closeMenus} className="block text-gray-700 hover:text-blue-600 pl-2 border-l-2 border-gray-300 hover:border-blue-600">Core Members</Link>
+              <Link to="/team/core" onClick={closeMenus} className="block text-gray-700 hover:text-blue-600 pl-2 border-l-2 border-gray-300 hover:border-blue-600">Executive Committee</Link>
               <Link to="/team/junior" onClick={closeMenus} className="block text-gray-700 hover:text-blue-600 pl-2 border-l-2 border-gray-300 hover:border-blue-600">Associate Members</Link>
             </div>
 
