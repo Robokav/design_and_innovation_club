@@ -3,7 +3,8 @@ import { Linkedin, Mail, User, ChevronDown, ChevronUp } from 'lucide-react';
 
 // --- OPTION 2: LOCAL IMAGE IMPORT ---
 // Uncomment this if you have the local file
-import prof from '../../assets/reddysir.jpg'; 
+import prof1 from '../../assets/reddysir.jpg'; 
+import prof2 from '../../assets/ankitsir.png'; 
 
 // --- PLACEHOLDER FOR PREVIEW ---
 
@@ -73,14 +74,14 @@ const Professor = () => {
     { 
         name: "Dr. Seelam Rajasekhar Reddy", 
         role: "Professor of Metallurgical and Materials Engineering at VNIT", 
-        image: prof,
+        image: prof1,
         bio: "I am Dr. Seelam Rajasekhar Reddy, an Assistant Professor of Metallurgical and Materials Engineering at VNIT, Nagpur. My academic background includes a Ph.D. from IIT Hyderabad and postdoctoral research at IIT Kanpur. My primary research expertise lies in Physical Metallurgy and the thermomechanical processing of advanced materials.In addition to this, my group actively works on exciting areas like Additive Manufacturing of materials for both strategic applications and biomedical uses. We also explore recycling scrap metals for unique cultural purposes, such as Dokra art, and focus on new equipment development for materials engineering research. My other research areas include Mineral Processing and Steel Making. I am currnetly Incharge of Mineral Processing Laboratory and Additive Manufacturing (Polymer Processing) Laboratory and I am proud to serve as the In-Charge of the Design and Innovation Club of VNIT." 
     },
     { 
         name: "Dr. Ankit A. Bhurane", 
-        role: "Professor In-Charge", 
-        image: null,
-        bio: "Dr. Ankit A. Bhurane is a dedicated faculty member known for his guidance in student innovation projects. He specializes in signal processing and AI applications, bridging the gap between theoretical concepts and practical implementations." 
+        role: "Professor of Electronics and Communication Engineering at VNIT", 
+        image: prof2,
+        bio: "Dr. Ankit A. Bhurane has received his B.E. in Electronics and Communication, M.Tech. in Electronics, and Ph.D. in 2008, 2011, and 2016 respectively from SGBAU University, SGGS Nanded, and Indian Institute of Technology Bombay (IITB). He is following teaching as his passion and has 9+ years of experience teaching undergraduate and postgraduate courses at various institutes of national importances like Indian Institute of Information Technology, National Institute of Technology etc. He has published several papers in various International conferences and journals. He has been active reviewer for reputed IEEE conference and Elsevier journals. He has four Indian Patent Granted, and 3 filed with IPR office, India. His research interested include embedded systems, biomedical signal processing, scalable video coding and green Communication." 
     }, 
   ];
 
