@@ -67,7 +67,7 @@ const TeamMember = ({ member,onClick }) => {
 
       {/* Expandable Bio Section - Controlled by THIS card's state only */}
       <div 
-        className={`bg-gray-50 overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-96 opacity-100 border-t border-gray-100' : 'max-h-0 opacity-0 border-none'}`}
+        className={`bg-gray-50 overflow-y-auto transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-96 opacity-100 border-t border-gray-100' : 'max-h-0 opacity-0 border-none'}`}
       >
         <div className="p-6">
             <p className="text-gray-600 text-sm leading-relaxed text-justify">
