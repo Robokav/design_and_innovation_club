@@ -37,7 +37,7 @@ const Home = () => {
             {/* Floating and Strobe-waving Logo */}
             <img 
               src={logo} 
-              alt="club Logo" 
+              alt="design and Innovation club Logo" 
               className="w-32 h-32 md:w-40 md:h-40 object-contain animate-float" 
             
             />

@@ -58,7 +58,7 @@ const NavBar = () => {
         <Link to="/" className="text-2xl font-bold text-gray-900 tracking-tight flex items-center gap-3 group">
           <img 
             src={logo} 
-            alt="Club Logo" 
+            alt="Design and Innovation Club Logo" 
             className="h-10 w-auto object-contain" 
           />
           <span>Design & Innovation Club</span>
