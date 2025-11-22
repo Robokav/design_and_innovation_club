@@ -39,6 +39,7 @@ const Home = () => {
               src={logo} 
               alt="club Logo" 
               className="w-32 h-32 md:w-40 md:h-40 object-contain animate-float" 
+            
             />
           </div>
 

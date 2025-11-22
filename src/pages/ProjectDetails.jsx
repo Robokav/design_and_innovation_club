@@ -95,6 +95,8 @@ const ProjectDetails = () => {
                     src={galleryImages[currentImageIndex]} 
                     alt={`${project.title} - Photo`} 
                     className="w-full h-full object-contain animate-fade-in"
+                    loading="lazy"
+                    decoding="async"
                 />
 
                 <div className="absolute top-4 right-4 bg-black/50 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">

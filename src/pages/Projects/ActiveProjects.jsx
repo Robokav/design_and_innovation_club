@@ -16,7 +16,9 @@ const ProjectCard = ({ project }) => (
       <img 
         src={project.image} 
         alt={project.title} 
-        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" 
+        loading="lazy"
+        decoding="async"
       />
       <div className="absolute top-4 left-4 flex flex-wrap gap-2 z-20">
         {project.tags.map((tag, index) => ( 

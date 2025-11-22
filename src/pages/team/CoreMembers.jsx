@@ -8,7 +8,7 @@ const TeamMember = ({ name, role,branch, image,linkedin }) => (
   <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6 text-center border border-gray-100 group">
     <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-50 group-hover:border-blue-100 transition-colors">
       {image ? (
-        <img src={image} alt={name} className="w-full h-full object-cover" />
+        <img src={image} alt={name} className="w-full h-full object-cover" loading="lazy" decoding="async" />
       ) : (
         <div className="w-full h-full flex items-center justify-center bg-gray-100 text-gray-400">
           <User size={48} />

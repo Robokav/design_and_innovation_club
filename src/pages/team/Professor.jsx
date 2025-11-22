@@ -29,7 +29,7 @@ const TeamMember = ({ member,onClick }) => {
         {/* Profile Image */}
         <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-50 transition-colors relative flex-shrink-0">
           {member.image ? (
-            <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+            <img src={member.image} alt={member.name} className="w-full h-full object-cover" loading="lazy" decoding="async" />
           ) : (
             <div className="w-full h-full flex items-center justify-center bg-gray-100 text-gray-400">
               <User size={48} />
