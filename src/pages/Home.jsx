@@ -84,7 +84,7 @@ const Home = () => {
                 {/* Replace 'src' below with your actual video URL (YouTube Embed or MP4) */}
                 <iframe 
                   className="w-full h-full" 
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=VideoPlaceholder" 
+                  src="https://www.youtube.com/embed/DsoFN7JVX8s?rel=0" 
                   title="Club Intro Video" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                   referrerPolicy="strict-origin-when-cross-origin" 

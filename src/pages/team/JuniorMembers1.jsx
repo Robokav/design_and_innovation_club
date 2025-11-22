@@ -28,8 +28,8 @@ const JuniorMembers = () => {
               There are currently no associate committee members. If you are enthusiastic about this club, this is your chance to be part of something big!
             </p>
 
-           { /*<div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+             {/* <Link 
                 to="/contact" 
                 className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition-all hover:scale-105 shadow-lg shadow-blue-200"
               >
@@ -41,8 +41,8 @@ const JuniorMembers = () => {
                 className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-blue-600 hover:text-blue-600 transition-all"
               >
                 Stay Updated
-              </a>
-            </div>*/}
+              </a>*/}
+            </div>*
 
           </div>
         </div>

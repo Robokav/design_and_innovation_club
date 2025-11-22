@@ -16,7 +16,7 @@ const Footer = () => {
             <p className="text-sm opacity-80">Innovation begins with imagination.</p>
           </div>
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-white transition-colors"><YoutubeIcon size={20} /></a>
+            <a href="https://www.youtube.com/@DesignandInnovationclub" target="_blank"  className="hover:text-white transition-colors"><YoutubeIcon size={20} /></a>
           {/*add when insta and linkedin and github are active*/}
        {/*     <a href="#" className="hover:text-white transition-colors"><Instagram size={20} /></a>
             <a href="#" className="hover:text-white transition-colors"><Linkedin size={20} /></a>
