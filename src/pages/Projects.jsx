@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Github } from 'lucide-react';
-import img from '../assets/hogwarts.jpg'; 
+
 
 // --- DATA INLINED ---
 import { projects } from '../data/projects'; 

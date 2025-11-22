@@ -6,6 +6,9 @@ import hogwarts1 from "../assets/hogwarts1.jpg"
 import mom from "../assets/lovemom.jpg"
 import dad from "../assets/lovedad.jpg"
 import love from "../assets/love.jpg"
+import god1 from "../assets/god.jpg"
+import peacock from "../assets/peacock.jpg"
+import dragon from "../assets/dragon.jpg"
 
 
 export const projects = [
@@ -55,12 +58,12 @@ export const projects = [
     },
     {
         id: 4,
-        title: "Hogwarts Castle",
-        description: "A highly detailed Hogwarts Castle model designed in AutoCAD and transformed into a tangible structure through precision 3D printing",
-        fullDescription: "This project features a detailed 3D model of the Hogwarts Castle, digitally crafted in AutoCAD and brought to life through 3D printing. The design captures the intricate architecture, towers, and textures of the iconic structure, demonstrating precision modeling skills and advanced knowledge of 3D CAD tools. The final print showcases complex geometries, layered terrain, and structural depth, highlighting the capabilities of additive manufacturing and the creative process from digital concept to physical model.",
+        title: "Fun Projects",
+        description: "Creative 3D prints crafted just for fun.",
+        fullDescription: "Explore our collection of cool, creative, and precision-engineered designs—each born from AutoCAD sketches and brought to life through high-quality 3D printing. From quirky desk gadgets to mini mechanical marvels, these fun-focused projects blend playful imagination with solid technical craftsmanship.",
         
-        gallery: [hogwarts,hogwarts1],
-        tags: ["AutoCad", "3d printing","Hogwarts model"],
+        gallery: [hogwarts,hogwarts1,god1,peacock,dragon],
+        tags: ["AutoCad", "3d printing","fun"],
         category: "3d-model",
         image: hogwarts,
         github: "",
