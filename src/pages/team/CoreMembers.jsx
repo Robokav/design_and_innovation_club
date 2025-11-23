@@ -3,6 +3,7 @@ import { Linkedin, Mail, User } from 'lucide-react';
 import president from "../../assets/president.png";
 import treasurer from "../../assets/treasurer.jpg";
 import mediacoordinator from "../../assets/mediacoordinator.png";
+import vicepresident from "../../assets/vicepresident.jpg";
 
 const TeamMember = ({ name, role,branch, image,linkedin }) => (
   <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6 text-center border border-gray-100 group">
@@ -30,7 +31,7 @@ const TeamMember = ({ name, role,branch, image,linkedin }) => (
 const CoreMembers = () => {
   const coreMembers = [
     { name: "Siddharth Hoonka", role: "President",branch: "Metallurgy and Materials Engineering", image: president , linkedin: "https://www.linkedin.com/in/siddharth-hoonka?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-    { name: "Muhammed Afnan", role: "Vice President",branch: "Metallurgy and Materials Engineering", image: null,linkedin: "https://www.linkedin.com/in/afnan-vt-a17461286" },
+    { name: "Muhammed Afnan", role: "Vice President",branch: "Metallurgy and Materials Engineering", image: vicepresident,linkedin: "https://www.linkedin.com/in/afnan-vt-a17461286" },
     { name: "Devasoth Nandhini", role: "Treasurer and Event Cordinator",branch: "Metallurgy and Materials Engineering", image: treasurer, linkedin: "https://www.linkedin.com/in/nandhini-devasoth-349666250/" },
     { name: "Kavin Bavisi", role: "Media Coordinator",branch: "Electronics and Communication Engineering", image: mediacoordinator,linkedin: "https://www.linkedin.com/in/kavin-amit-bavisi-826733386/" },
   ];
