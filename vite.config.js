@@ -8,20 +8,33 @@ export default defineConfig({
       base: '/', 
   plugins: [
     react(),
-     Sitemap({
-      hostname: 'https://design-and-innovation-club.vercel.app', // IMPORTANT: Use your actual Vercel domain
+       // 2. Generate Sitemap automatically
+    Sitemap({
+      // REPLACE with your actual domain when deployed
+      hostname: 'https://design-and-innovation-club.vercel.app', 
       
-      // Define the static routes that don't come from data
+      // List all static pages
       routes: [
-        '/', 
-        '/projects', 
-        '/projects/active', 
+        '/',
+        '/projects',
+        '/projects/active',
         '/projects/3d-models',
         '/team/professor',
         '/team/core',
         '/team/junior',
-        '/contact'
-      ],}),
+        '/contact',
+        // ADDING DYNAMIC PROJECT ROUTES MANUALLY
+        // Since your data is inlined, we tell the plugin these exist
+        '/projects/1',
+        '/projects/2',
+        '/projects/3',
+        '/projects/4'
+      ],
+      // This ensures the file is named sitemap.xml in the dist folder
+      outDir: 'dist',
+      changefreq: 'monthly',
+      priority: 0.7,
+    }),
       
      ViteImageOptimizer({
       /* config options */
